@@ -68,7 +68,7 @@ func (uUC *UserUseCase) Update(id int, updatedUser dto.UpdateUserRequestDto) err
 	_, err := uUC.userRepo.GetOne(id)
 	if err != nil {
 		if err == gorm.ErrRecordNotFound {
-			return errors.New("cannot update a inexistent user")
+			return errors.New("cannot update a nonexistent user")
 		}
 
 		return err
