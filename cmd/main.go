@@ -49,6 +49,7 @@ func main() {
 	restful.Add(ws)
 
 	log.Println(binding)
+
 	if err := http.ListenAndServe(binding, nil); err != nil {
 		log.Fatal(err)
 	}
